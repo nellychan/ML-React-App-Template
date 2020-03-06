@@ -8,7 +8,7 @@ flask_app = Flask(__name__)
 app = Api(app = flask_app, 
 		  version = "1.0", 
 		  title = "Flight Departure Delay Predictor", 
-		  description = "Predict whether a flight departure will be delayed)
+		  description = "Predict whether a flight departure will be delayed")
 
 name_space = app.namespace('prediction', description='Prediction APIs')
 
