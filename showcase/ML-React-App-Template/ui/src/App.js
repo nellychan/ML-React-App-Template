@@ -83,7 +83,7 @@ class App extends Component {
     return (
       <Container>
         <div>
-          <h1 className="title">Flight Departure Delay Predictor</h1>
+          <h1 className="title">Flight Delay Predictor</h1>
         </div>
         <div className="content">
           <Form>
