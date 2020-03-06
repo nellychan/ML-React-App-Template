@@ -7,21 +7,21 @@ import sys
 flask_app = Flask(__name__)
 app = Api(app = flask_app, 
 		  version = "1.0", 
-		  title = "Iris Plant identifier", 
-		  description = "Predict the type of iris plant")
+		  title = "Flight Departure Delay Predictor", 
+		  description = "Predict whether a flight departure will be delayed)
 
 name_space = app.namespace('prediction', description='Prediction APIs')
 
 model = app.model('Prediction params', 
 				  {'sepalLength': fields.Float(required = True, 
 				  							   description="Day of the Week", 
-    					  				 	   help="Sepal Length cannot be blank"),
+    					  				 	   help="Day of the Week cannot be blank"),
 				  'sepalWidth': fields.Float(required = True, 
 				  							   description="Origin", 
-    					  				 	   help="Sepal Width cannot be blank"),
+    					  				 	   help="Origin cannot be blank"),
 				  'petalLength': fields.Float(required = True, 
-				  							description="Busy Factor", 
-    					  				 	help="Petal Length cannot be blank"),
+				  							description="Destination", 
+    					  				 	help="Destination cannot be blank"),
 				  'petalWidth': fields.Float(required = True, 
 				  							description="Time", 
     					  				 	help="Petal Width cannot be blank")})
