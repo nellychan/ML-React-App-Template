@@ -13,18 +13,18 @@ app = Api(app = flask_app,
 name_space = app.namespace('prediction', description='Prediction APIs')
 
 model = app.model('Prediction params', 
-				  {'sepalLength': fields.Float(required = True, 
+				  {'DAY_OF_WEEK': fields.Float(required = True, 
 				  							   description="Day of the Week", 
     					  				 	   help="Day of the Week cannot be blank"),
-				  'sepalWidth': fields.Float(required = True, 
-				  							   description="Origin", 
-    					  				 	   help="Origin cannot be blank"),
-				  'petalLength': fields.Float(required = True, 
-				  							description="Destination", 
-    					  				 	help="Destination cannot be blank"),
-				  'petalWidth': fields.Float(required = True, 
-				  							description="Time", 
-    					  				 	help="Petal Width cannot be blank")})
+				  'MONTH': fields.Float(required = True, 
+				  							   description="Month", 
+    					  				 	   help="Month cannot be blank"),
+				  'BusyFactor': fields.Float(required = True, 
+				  							description="Origin", 
+    					  				 	help="Origin cannot be blank"),
+				  'Hourofdeparture_converted': fields.Float(required = True, 
+				  							description="Time Block", 
+    					  				 	help="Time Block cannot be blank")})
 
 classifier = joblib.load('classifier.joblib')
 
@@ -44,7 +44,7 @@ class MainClass(Resource):
 			formData = request.json
 			data = [val for val in formData.values()]
 			prediction = classifier.predict(np.array(data).reshape(1, -1))
-			types = { 0: "ON TIME", 1: "LATE", 2: "Iris Virginica"}
+			types = { 0: "ON TIME", 1: "LATE"}
 			response = jsonify({
 				"statusCode": 200,
 				"status": "Prediction made",
