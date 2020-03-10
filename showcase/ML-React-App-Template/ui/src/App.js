@@ -15,10 +15,10 @@ class App extends Component {
     this.state = {
       isLoading: false,
       formData: {
-        sepalLength: 4,
-        sepalWidth: 2,
-        petalLength: 1,
-        petalWidth: 0
+        DAY_OF_WEEK: 1,
+        MONTH: 2,
+        BusyFactor: 1,
+        Hourofdeparture_converted: 0
       },
       result: ""
     };
@@ -64,21 +64,21 @@ class App extends Component {
     const formData = this.state.formData;
     const result = this.state.result;
 
-    var sepalLengths = []
+    var DAY_OF_WEEK = []
     for (var i = 4; i <= 7; i = +(i + 0.1).toFixed(1)) {
-      sepalLengths.push(<option key = {i} value = {i}>{i}</option>);
+      DAY_OF_WEEK.push(<option key = {i} value = {i}>{i}</option>);
     }
-    var sepalWidths = []
+    var MONTH = []
     for (var i = 2; i <= 4; i = +(i + 0.1).toFixed(1)) {
-      sepalWidths.push(<option key = {i} value = {i}>{i}</option>);
+      MONTH.push(<option key = {i} value = {i}>{i}</option>);
     }
-    var petalLengths = []
+    var BusyFactor = []
     for (var i = 1; i <= 6; i = +(i + 0.1).toFixed(1)){
-      petalLengths.push(<option key = {i} value = {i}>{i}</option>);
+      BusyFactor.push(<option key = {i} value = {i}>{i}</option>);
     }
-    var petalWidths = []
+    var Hourofdeparture_converted = []
     for (var i = 0.1; i <= 3; i = +(i + 0.1).toFixed(1)) {
-      petalWidths.push(<option key = {i} value = {i}>{i}</option>);
+      Hourofdeparture_converted.push(<option key = {i} value = {i}>{i}</option>);
     }
     return (
       <Container>
@@ -92,42 +92,42 @@ class App extends Component {
                 <Form.Label>Day of the week</Form.Label>
                 <Form.Control 
                   as="select"
-                  value={formData.sepalLength}
-                  name="sepalLength"
+                  value={formData.DAY_OF_WEEK}
+                  name="DAY_OF_WEEK"
                   onChange={this.handleChange}>
-                  {sepalLengths}
+                  {DAY_OF_WEEK}
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
                 <Form.Label>Origin</Form.Label>
                 <Form.Control 
                   as="select"
-                  value={formData.sepalWidth}
-                  name="sepalWidth"
+                  value={formData.MONTH}
+                  name="MONTH"
                   onChange={this.handleChange}>
-                  {sepalWidths}
+                  {MONTH}
                 </Form.Control>
               </Form.Group>
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Destination</Form.Label>
+                <Form.Label>Origin</Form.Label>
                 <Form.Control 
                   as="select"
-                  value={formData.petalLength}
-                  name="petalLength"
+                  value={formData.BusyFactor}
+                  name="BusyFactor"
                   onChange={this.handleChange}>
-                  {petalLengths}
+                  {BusyFactor}
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
                 <Form.Label>Time</Form.Label>
                 <Form.Control 
                   as="select"
-                  value={formData.petalWidth}
-                  name="petalWidth"
+                  value={formData.Hourofdeparture_converted}
+                  name="Hourofdeparture_converted"
                   onChange={this.handleChange}>
-                  {petalWidths}
+                  {Hourofdeparture_converted}
                 </Form.Control>
               </Form.Group>
             </Form.Row>
