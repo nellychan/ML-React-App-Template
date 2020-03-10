@@ -99,7 +99,7 @@ class App extends Component {
                 </Form.Control>
               </Form.Group>
               <Form.Group as={Col}>
-                <Form.Label>Origin</Form.Label>
+                <Form.Label>Month</Form.Label>
                 <Form.Control 
                   as="select"
                   value={formData.MONTH}
