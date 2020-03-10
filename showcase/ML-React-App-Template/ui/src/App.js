@@ -65,19 +65,19 @@ class App extends Component {
     const result = this.state.result;
 
     var DAY_OF_WEEK = []
-    for (var i = 4; i <= 7; i = +(i + 0.1).toFixed(1)) {
+    for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
       DAY_OF_WEEK.push(<option key = {i} value = {i}>{i}</option>);
     }
     var MONTH = []
-    for (var i = 2; i <= 4; i = +(i + 0.1).toFixed(1)) {
+    for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
       MONTH.push(<option key = {i} value = {i}>{i}</option>);
     }
     var BusyFactor = []
-    for (var i = 1; i <= 6; i = +(i + 0.1).toFixed(1)){
+    for (var i = 1; i <= 5; i = +(i + 1).toFixed(1)){
       BusyFactor.push(<option key = {i} value = {i}>{i}</option>);
     }
     var Hourofdeparture_converted = []
-    for (var i = 0.1; i <= 3; i = +(i + 0.1).toFixed(1)) {
+    for (var i = 1; i <= 9; i = +(i + 1).toFixed(1)) {
       Hourofdeparture_converted.push(<option key = {i} value = {i}>{i}</option>);
     }
     return (
