@@ -72,16 +72,22 @@ class App extends Component {
             //text += DAYS[i] + "<br>";
       DAY_OF_WEEK.push(<option key = {DAYS[i]} value = {DAYS[i]}>{i}</option>);
     }
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    var text = "";                   
     var MONTH = []
-    for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
+    //for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
+    for (var i=0; i< month.length; i++) {                   
       MONTH.push(<option key = {i} value = {i}>{i}</option>);
     }
     var BusyFactor = []
     for (var i = 1; i <= 5; i = +(i + 1).toFixed(1)){
       BusyFactor.push(<option key = {i} value = {i}>{i}</option>);
     }
+    var hour = ["0000 - 0700", "0700 - 0900", "0900 - 1100", "1100 - 1300", "1300 - 1500", "1500 - 1700", "1700 - 1900", "1900 - 2000", "2000 - 2400"]
+    var text = "";                   
     var Hourofdeparture_converted = []
-    for (var i = 1; i <= 9; i = +(i + 1).toFixed(1)) {
+    //for (var i = 1; i <= 9; i = +(i + 1).toFixed(1)) {
+      for (var i=0; i< month.length; i++) {                
       Hourofdeparture_converted.push(<option key = {i} value = {i}>{i}</option>);
     }
     return (
