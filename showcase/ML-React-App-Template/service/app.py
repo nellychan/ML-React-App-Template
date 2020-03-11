@@ -42,6 +42,7 @@ class MainClass(Resource):
 	def post(self):
 		try: 
 			formData = request.json
+			print formData
 			data = [val for val in formData.values()]
 			prediction = classifier.predict(np.array(data).reshape(1, -1))
 			types = { 0: "ON TIME", 1: "LATE"}
