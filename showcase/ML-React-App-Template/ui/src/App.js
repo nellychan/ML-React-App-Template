@@ -70,7 +70,7 @@ class App extends Component {
     //for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
       for (var i=0; i< DAYS.length; i++) {
             //text += DAYS[i] + "<br>";
-      DAY_OF_WEEK.push(<option key = {DAYS[i]} value = {DAYS[i]}>{DAYS[i]}</option>);
+      DAY_OF_WEEK.push(<option key = {DAYS[i]} value = {DAYS[i]}>{i}</option>);
     }
     var MONTH = []
     for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
