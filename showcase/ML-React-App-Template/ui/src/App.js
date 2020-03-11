@@ -74,8 +74,8 @@ class App extends Component {
      ]);
 
 // iterate over keys (vegetables)
-for (let nelly of dayMap.keys()) {
-  alert(nelly); // cucumber, tomatoes, onion
+for (let days of dayMap.keys()) {
+  alert(days); // Monday, Tuesday, Wednesday etc
 }
 
     var DAY_OF_WEEK = []
