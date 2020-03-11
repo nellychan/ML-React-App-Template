@@ -63,25 +63,15 @@ class App extends Component {
     const isLoading = this.state.isLoading;
     const formData = this.state.formData;
     const result = this.state.result;
-    let dayMap = new Map([
-        ['Monday', 1],
-        ['Tuesday', 2],
-        ['Wednesday', 3],
-        ['Thursday', 4],
-        ['Friday', 5],
-        ['Saturday', 6],
-        ['Sunday', 7]
-     ]);
 
-// iterate over keys (days)
-for (let days of dayMap.keys()) {
-  alert(days); // Monday, Tuesday, Wednesday etc
-}
-
+    var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    var text = "";
     var DAY_OF_WEEK = []
     for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
+      for (var j=0; j< DAYS.length; j++) {
+            text += DAYS[j] + "<br>";
       DAY_OF_WEEK.push(<option key = {i} value = {i}>{i}</option>);
-    }
+    }}
     var MONTH = []
     for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
       MONTH.push(<option key = {i} value = {i}>{i}</option>);
