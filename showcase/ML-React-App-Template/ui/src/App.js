@@ -63,6 +63,20 @@ class App extends Component {
     const isLoading = this.state.isLoading;
     const formData = this.state.formData;
     const result = this.state.result;
+    let dayMap = new Map([
+        ['Monday', 1],
+        ['Tuesday', 2],
+        ['Wednesday', 3],
+        ['Thursday', 4],
+        ['Friday', 5],
+        ['Saturday', 6],
+        ['Sunday', 7]
+     ]);
+
+// iterate over keys (vegetables)
+for (let nelly of dayMap.keys()) {
+  alert(nelly); // cucumber, tomatoes, onion
+}
 
     var DAY_OF_WEEK = []
     for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
