@@ -16,9 +16,9 @@ class App extends Component {
       isLoading: false,
       formData: {
         DAY_OF_WEEK: 1,
-        MONTH: 2,
+        MONTH: 1,
         BusyFactor: 1,
-        Hourofdeparture_converted: 0
+        Hourofdeparture_converted: 1
       },
       result: ""
     };
