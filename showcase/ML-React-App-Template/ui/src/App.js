@@ -65,13 +65,13 @@ class App extends Component {
     const result = this.state.result;
 
     var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    var text = "";
+    var text = ""; 
     var DAY_OF_WEEK = []
-    for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
-      for (var j=0; j< DAYS.length; j++) {
-            text += DAYS[j] + "<br>";
-      DAY_OF_WEEK.push(<option key = {i} value = {i}>{i}</option>);
-    }}
+    //for (var i = 1; i <= 7; i = +(i + 1).toFixed(1)) {
+      for (var i=0; i< DAYS.length; i++) {
+            text += DAYS[i] + "<br>";
+      DAY_OF_WEEK.push(<option key = {i} value = {DAYS[i]}>{DAYS[i]}</option>);
+    }
     var MONTH = []
     for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
       MONTH.push(<option key = {i} value = {i}>{i}</option>);
