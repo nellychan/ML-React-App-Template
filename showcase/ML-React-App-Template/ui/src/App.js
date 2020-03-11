@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+eimport React, { Component } from 'react';
 import './App.css';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
@@ -73,7 +73,7 @@ class App extends Component {
         ['Sunday', 7]
      ]);
 
-// iterate over keys (vegetables)
+// iterate over keys (days)
 for (let days of dayMap.keys()) {
   alert(days); // Monday, Tuesday, Wednesday etc
 }
