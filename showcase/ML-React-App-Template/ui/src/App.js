@@ -77,7 +77,7 @@ class App extends Component {
     var MONTH = []
     //for (var i = 1; i <= 12; i = +(i + 1).toFixed(1)) {
     for (var i=0; i< month.length; i++) {                   
-      MONTH.push(<option key = {i} value = {i}>{i}</option>);
+      MONTH.push(<option key = {month[i]} value = {month[i]}>{i}</option>);
     }
     var BusyFactor = []
     for (var i = 1; i <= 5; i = +(i + 1).toFixed(1)){
@@ -88,7 +88,7 @@ class App extends Component {
     var Hourofdeparture_converted = []
     //for (var i = 1; i <= 9; i = +(i + 1).toFixed(1)) {
       for (var i=0; i< month.length; i++) {                
-      Hourofdeparture_converted.push(<option key = {i} value = {i}>{i}</option>);
+      Hourofdeparture_converted.push(<option key = {hour[i]} value = {hour[i]}>{i}</option>);
     }
     return (
       <Container>
