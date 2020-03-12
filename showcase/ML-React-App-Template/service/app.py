@@ -45,7 +45,7 @@ class MainClass(Resource):
 			print(formData)
 			data = [val for val in formData.values()]
 			prediction = classifier.predict(np.array(data).reshape(1, -1))
-			types = { 0: "ON TIME", 1: "LATE"}
+			types = { 0: "LATE", 1: "ON TIME"}
 			response = jsonify({
 				"statusCode": 200,
 				"status": "Prediction made",
