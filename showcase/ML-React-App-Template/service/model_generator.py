@@ -18,14 +18,6 @@ flight_df1=flight_data[['DAY_OF_WEEK','MONTH','BusyFactor','Hourofdeparture_conv
 data_1 = flight_df1.drop('Delay15Min',1) #Feature Matrix
 target_1 = flight_df1['Delay15Min'] #Target Variable
 
-#Features are already encoded
-
-#Scaling encoded features (Not sure if this is complete necessary)
-#data_1_df = data_1.copy()
-#Data_scaler = preprocessing.MinMaxScaler()
-#Data_scaler.fit(data_1)
-#data_1 = Data_scaler.fit_transform(data_1)
-
 # Split the dataset into training (70%) and testing (30%) data
 data_1_train, data_1_test, \
 target_1_train, target_1_test = train_test_split(data_1, target_1, 
