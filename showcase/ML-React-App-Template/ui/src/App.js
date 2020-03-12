@@ -121,7 +121,7 @@ class App extends Component {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Origin</Form.Label>
+                <Form.Label>Origin Code</Form.Label>
                 <Form.Control 
                   as="select"
                   value={formData.BusyFactor}
